@@ -67,10 +67,8 @@ img {
     padding: 0;
 }
 
-.social {
-    padding-top: 170px;
-}
-
 #er {
     padding: 0 10px 10px 0;
+    width: 120px;
+    height: 150px;
 }
