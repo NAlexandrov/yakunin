@@ -5,48 +5,88 @@
     <meta charset="utf-8">
     <title>Якунин</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
 
-<div class="container">
-    <h1>Поздравим Владимира Якунина</h1>
-    <p>За 10 лет глава РЖД и старый друг Путина добился стабильно высоких цен на билеты, нажил сотни миллионов долларов и отправил своих детей жить за границу.</p>
-    <img src="assets/img/yakunin.png" alt="Якунин">
-    <p>Скачай и распечатай листовку о достижениях пенсионера-госслужащего Владимира Якунина. Пусть соседи тоже порадуются.</p>
-    <div class="row">
-        <div class="col-sm-6 text-center">
-            <a href="#" class="btn btn-red">Скачать ч/б</a>
-            <div class="sheet">
-                <a href="#">
-                    <img src="" alt="Ч/б листовка">
-                </a>
-            </div>
+<div class="header bg-white border-red">
+    <div class="container">
+        <h1>Поздравим Владимира Якунина</h1>
+    </div>
+</div>
+
+<div class="content border-red">
+    <div class="container">
+        <p>За 10 лет глава РЖД и старый друг Путина добился стабильно высоких цен на билеты, нажил сотни миллионов долларов <span style="white-space: nowrap">и отправил</span> своих детей жить за границу.</p>
+        <div class="circle">1</div>
+        <div>
+            <img src="assets/img/yakunin.png" alt="Якунин">
         </div>
-        <div class="col-sm-6 text-center">
-            <a href="#" class="btn btn-red">Скачать цветную</a>
-            <div class="sheet">
-                <a href="#">
-                    <img src="" alt="Цветная листовка">
-                </a>
+        <div class="read">
+            <a href="#" class="btn btn-red">Прочитать историю</a>
+        </div>
+    </div>
+</div>
+
+<div class="download bg-white border-red">
+    <div class="container">
+        <div class="circle">2</div>
+        <p>Сделай так, чтобы твоя бабушка и соседка тоже знали о достижениях нашего поросенка:</p>
+        <div class="row">
+            <div class="col-sm-6 text-center">
+                <a href="assets/yakunin-bw.pdf" class="btn btn-red">Скачать ч/б листовку</a>
+                <div class="sheet">
+                    <a href="assets/img/bw.png" class="fancybox">
+                        <img src="assets/img/bw.png" alt="Ч/б листовка">
+                        <i class="icon-zoom-in"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 text-center">
+                <a href="assets/yakunin.pdf" class="btn btn-red">Скачать цветную листовку</a>
+                <div class="sheet">
+                    <a href="assets/img/color.png" class="fancybox">
+                        <img src="assets/img/color.png" alt="Цветная листовка">
+                        <i class="icon-zoom-in"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="row footer">
-    <div class="col-sm-8 col-sm-offset-2 text-center social">
-        <div class="hidden-xs" style="height: 120px">&nbsp;</div>
-        <ul class="list-inline">
+<div class="social">
+    <div class="container">
+        <div class="circle">3</div>
+        <p>Расскажи друзьям. О таком свинстве должен знать каждый:</p>
+        <!--<ul class="list-inline">
             <li>twitter</li>
             <li>facebook</li>
             <li>vkontake</li>
-        </ul>
-    </div>
-    <div class="col-sm-2 text-center">
-        <img src="assets/img/er.png" id="er" alt="Единая Россия - Партия жуликов и воров">
+        </ul>-->
+        <script type="text/javascript">(function() {
+            if (window.pluso)if (typeof window.pluso.start == "function") return;
+            if (window.ifpluso==undefined) { window.ifpluso = 1;
+                var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                s.src = ('https:' == window.location.protocol ? 'https' : 'http') + '://share.pluso.ru/pluso-like.js';
+                var h=d[g]('body')[0];
+                h.appendChild(s);
+            }})();</script>
+        <div class="pluso" data-background="none;" data-options="medium,square,line,horizontal,nocounter,sepcounter=1,theme=14" data-services="vkontakte,facebook,twitter,livejournal,readability" data-url="http://yakunin.fbk.info" data-user="615141015"></div>
+        <div><img src="assets/img/er.png" id="er" alt="Единая Россия - Партия жуликов и воров"></div>
     </div>
 </div>
+
+<script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.fancybox.pack.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".fancybox").fancybox();
+    });
+</script>
 
 </body>
 </html>
