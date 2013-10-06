@@ -4,9 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Якунин</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/jquery.fancybox.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/main.css">-->
+    <link rel="stylesheet" href="assets/css/main.min.css">
+
+    <link rel="prefetch" href="download.html">
+    <link rel="prefetch" href="assets/img/thanks.png">
+
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
 
@@ -18,13 +27,13 @@
 
 <div class="content border-red">
     <div class="container">
-        <p>За 10 лет глава РЖД и старый друг Путина добился стабильно высоких цен на билеты, нажил сотни миллионов долларов <span style="white-space: nowrap">и отправил</span> своих детей жить за границу.</p>
+        <p>За 10 лет глава РЖД и старый друг Путина добился стабильно высоких цен на билеты, нажил сотни миллионов долларов <span style="white-space: nowrap">и отправил</span> своих детей жить за границу.</p>
         <div class="circle">1</div>
         <div>
             <img src="assets/img/yakunin.png" alt="Якунин">
         </div>
         <div class="read">
-            <a href="#" class="btn btn-red">Прочитать историю</a>
+            <a data-fancybox-type="iframe" href="pdf/viewer.html?file=../assets/yakunin.pdf" class="btn btn-red fancybox-pdf">Почитать историю</a>
         </div>
     </div>
 </div>
@@ -32,10 +41,10 @@
 <div class="download bg-white border-red">
     <div class="container">
         <div class="circle">2</div>
-        <p>Сделай так, чтобы твоя бабушка и соседка тоже знали о достижениях нашего поросенка:</p>
+        <p>Сделай так, чтобы твоя бабушка и соседка тоже знали о достижениях нашего поросенка:</p>
         <div class="row">
             <div class="col-sm-6 text-center">
-                <a href="assets/yakunin-bw.pdf" class="btn btn-red">Скачать ч/б листовку</a>
+                <a href="download.html#bw" class="btn btn-red pdf">Скачать ч/б листовку</a>
                 <div class="sheet">
                     <a href="assets/img/bw.png" class="fancybox">
                         <img src="assets/img/bw.png" alt="Ч/б листовка">
@@ -44,7 +53,7 @@
                 </div>
             </div>
             <div class="col-sm-6 text-center">
-                <a href="assets/yakunin.pdf" class="btn btn-red">Скачать цветную листовку</a>
+                <a href="download.html#color" class="btn btn-red pdf">Скачать цветную листовку</a>
                 <div class="sheet">
                     <a href="assets/img/color.png" class="fancybox">
                         <img src="assets/img/color.png" alt="Цветная листовка">
@@ -75,16 +84,38 @@
                 h.appendChild(s);
             }})();</script>
         <div class="pluso" data-background="none;" data-options="medium,square,line,horizontal,nocounter,sepcounter=1,theme=14" data-services="vkontakte,facebook,twitter,livejournal,readability" data-url="http://yakunin.fbk.info" data-user="615141015"></div>
-        <div><img src="assets/img/er.png" id="er" alt="Единая Россия - Партия жуликов и воров"></div>
+        <div><img src="assets/img/er.png" width="120" height="100" id="er" alt="Единая Россия - Партия жуликов и воров"></div>
     </div>
 </div>
 
-<script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="assets/js/main.min.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function() {
-        $(".fancybox").fancybox();
+        $(".fancybox").fancybox({
+            padding: 0
+        });
+
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            $('.fancybox-pdf').on('click', function(e) {
+                e.preventDefault();
+                window.location.href = 'assets/yakunin.pdf';
+            });
+
+            $('a[href="download.html#bw"]').on('click', function(e) {
+                e.preventDefault();
+                window.location.href = 'assets/yakunin-bw.pdf';
+            });
+
+            $('a[href="download.html#color"]').on('click', function(e) {
+                e.preventDefault();
+                window.location.href = 'assets/yakunin.pdf';
+            });
+        } else {
+            $(".fancybox-pdf").fancybox({
+                padding: 0
+            });
+        }
     });
 </script>
 

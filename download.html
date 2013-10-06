@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Якунин</title>
+    <!--<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="assets/css/main.css">-->
+    <link rel="stylesheet" href="assets/css/main.min.css">
+
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="thanks">
+
+<div class="header">
+    <div class="container">
+        <h1>СПАСИБО,<br>ВЫ ВОСХИТИТЕЛЬНЫ!</h1>
+        <p>Помните, каждый раз, когда вы вешаете в лифте или закидываете в почтовый ящик эту листовку, где-то в шубохранилище роняет слезинку один нехороший поросенок. Так что сегодня вы смело можете всем рассказывать, что сделали хорошее дело.<br><a href="index.html">&larr; Вернуться на главную</a></p>
+        <div id="thanks">
+            <p class="hidden-xs">Сегодня<br>я молодец</p>
+            <p class="visible-xs" style="font-size: 23px; line-height: 23px; padding-top: 40px; font-size: 8vw; line-height: 8vw; padding-top: 12vw">Сегодня<br>я молодец</p>
+            <img src="assets/img/thanks.png" alt="Я молодец">
+        </div>
+    </div>
+</div>
+
+<div class="social">
+    <div class="container">
+        <p>Расскажи друзьям:</p>
+        <script type="text/javascript">(function() {
+            if (window.pluso)if (typeof window.pluso.start == "function") return;
+            if (window.ifpluso==undefined) { window.ifpluso = 1;
+                var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                s.src = ('https:' == window.location.protocol ? 'https' : 'http') + '://share.pluso.ru/pluso-like.js';
+                var h=d[g]('body')[0];
+                h.appendChild(s);
+            }})();</script>
+        <div class="pluso" data-background="none;" data-options="medium,square,line,horizontal,nocounter,sepcounter=1,theme=14" data-services="vkontakte,facebook,twitter,livejournal,readability" data-url="http://yakunin.fbk.info" data-user="615141015"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="assets/js/main.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        var hash = window.location.hash;
+        var iframe = document.createElement('iframe');
+
+        iframe.style.display = "none";
+
+        if ( hash == '#bw' ) {
+            iframe.src = 'assets/yakunin-bw.pdf';
+        } else {
+            iframe.src = 'assets/yakunin.pdf';
+        }
+
+        document.body.appendChild(iframe);
+    });
+</script>
+
+</body>
+</html>

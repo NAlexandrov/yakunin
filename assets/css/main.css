@@ -60,11 +60,49 @@
     display: none;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
-    background-color: #f3f3f3;
-    border-bottom: 7px solid #ea5046;
+    background-color: #efefef;
     margin: 0;
     padding: 0;
+    min-height: 100%;
+}
+
+.thanks {
+    border-top: 7px solid #ea5046;
+    padding-top: 60px;
+    border-bottom: 7px solid #ea5046;
+    position: relative;
+    height:auto !important;
+    height: 100%;
+    min-height:100%;
+}
+
+#thanks {
+    text-align: center;
+    display: block;
+    max-width: 760px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#thanks img {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#thanks p {
+    padding-top: 110px;
+    font-size: 58px;
+    color: #e94135;
+    line-height: 58px;
+    position: relative;
+    z-index: 9999;
 }
 
 h1 {
@@ -80,7 +118,7 @@ p {
     color: #000000;
     margin: 35px auto;
     display: block;
-    max-width: 500px;
+    max-width: 490px;
     font-family: 'myriad_pro';
     font-weight: 700;
 }
@@ -88,6 +126,20 @@ p {
 img {
     width: 100%;
     height: auto;
+}
+
+.thanks a:link, .thanks a:visited {
+    display: block;
+    color: #db4b44;
+    text-decoration: underline;
+    font-family: Verdana;
+    font-weight: normal;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.thanks a:hover, .thanks a:active {
+    text-decoration: none;
 }
 
 .container {
@@ -207,15 +259,28 @@ img {
 }
 
 .sheet a:hover img {
-    opacity: 0.2;
+    -moz-opacity: 0.2;
+    opacity:.2;
+    filter: alpha(opacity=20);
 }
 
 .sheet a:hover .icon-zoom-in {
     display: block;
-    opacity: 0.8;
+    -moz-opacity: 0.8;
+    opacity:.8;
 }
 
 /**** SOCIAL ****/
+
+.thanks .social {
+    border-bottom: 0;
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+
+.social {
+    border-bottom: 7px solid #ea5046;
+}
 
 .social .circle {
     margin-top: 30px;
